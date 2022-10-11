@@ -1,0 +1,5 @@
+1. install node .js and npm
+2. create react app
+3. install material ui
+4. npm install @mui/material @emotion/react @emotion/styled
+
