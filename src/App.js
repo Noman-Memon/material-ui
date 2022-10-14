@@ -1,8 +1,13 @@
 // import logo from './logo.svg'
 import './App.css'
 import { Button } from '@mui/material'
+import React, { useState } from 'react'
 
 function App() {
+  const [color, setcolor] = useState('primary')
+  function changeColor() {
+    setcolor('secondary')
+  }
   return (
     <>
       <div className="App">
@@ -12,7 +17,13 @@ function App() {
           <Button variant="contained" color="secondary">
             Secondary
           </Button>
-          <Button variant="contained" color="success">
+          <Button
+            variant="contained"
+            color={color}
+            onClick={() => {
+              changeColor()
+            }}
+          >
             Success
           </Button>
           <Button variant="outlined" color="error">
