@@ -1,12 +1,15 @@
 import './App.css'
 import DataTable from './Components/DataTable'
+import { PDFViewer } from '@react-pdf/renderer'
+import MyDocument from './Components/Pdf'
 
 function App() {
   return (
     <>
-      <div classNam>
-        <DataTable />
-      </div>
+      <DataTable />
+      <PDFViewer width="100%" height="1000px">
+        <MyDocument />
+      </PDFViewer>
     </>
   )
 }
