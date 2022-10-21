@@ -170,7 +170,39 @@ const styles = StyleSheet.create({
 // Create Document Component
 const MyDocument = () => (
   <Document>
-    <Page size="A4" style={styles.page}>
+    <Page size="A4" style={{ padding: '20px' }}>
+      <View
+        style={{
+          paddingBottom: '10',
+          paddingTop: '0',
+          fontSize: '22',
+          justifyContent: 'center',
+          display: 'flex',
+          flexDirection: 'row',
+        }}
+      >
+        <Text>M3 TECHNOLOGIES PAKISTAN(PRIVATE) LIMITED</Text>
+      </View>
+
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          fontSize: '18',
+        }}
+      >
+        <View
+          style={{
+            marginLeft: '200px',
+          }}
+        >
+          <Text>Debit Voucher</Text>
+        </View>
+
+        <View>
+          <Text>Status</Text>
+        </View>
+      </View>
       <View
         style={{
           paddingBottom: '10',
@@ -181,11 +213,10 @@ const MyDocument = () => (
           flexDirection: 'row',
         }}
       >
-        <Text>id</Text>
-
-        <Text>Title</Text>
-        <Text>body</Text>
+        <Text>Date</Text>
+        <Text>Time</Text>
       </View>
+      <Text>Title</Text>
     </Page>
   </Document>
 )

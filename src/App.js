@@ -6,7 +6,7 @@ import MyDocument from './Components/Pdf'
 function App() {
   return (
     <>
-      <DataTable />
+      {/* <DataTable /> */}
       <PDFViewer width="100%" height="1000px">
         <MyDocument />
       </PDFViewer>
