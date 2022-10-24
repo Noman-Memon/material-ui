@@ -261,6 +261,7 @@ const MyDocument = (props) => (
       >
         <Text>Voucher No.</Text>
       </View>
+      {/* Table header start */}
       <View
         style={{
           border: '1px solid black',
@@ -276,26 +277,26 @@ const MyDocument = (props) => (
           display: 'flex',
         }}
       >
-        <View>
+        <View style={{flex:1}}>
           <Text>Account Tittle</Text>
         </View>
 
-        <View>
+        <View style={{flex:2}}>
           <Text>Code</Text>
         </View>
-        <View>
+        <View style={{flex:2}}>
           <Text>Narration</Text>
         </View>
-        <View>
+        <View style={{flex:2}}>
           <Text>Ref</Text>
         </View>
-        <View>
+        <View style={{flex:2}}>
           <Text>Party</Text>
         </View>
-        <View>
+        <View style={{flex:2}}>
           <Text>Debit</Text>
         </View>
-        <View>
+        <View style={{flex:2}}>
           <Text>Credit</Text>
         </View>
       </View>
@@ -304,6 +305,43 @@ const MyDocument = (props) => (
           border: '1px solid black',
         }}
       ></View>
+      {/* Table header end */}
+      {props.tableData.map((v,i)=>{
+        return (<View style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          fontSize: '10',
+          paddingBottom: '5 ',
+          paddingTop: '15',
+          display: 'flex',
+        }}>
+      <View style={{flex:1}}>
+          <Text>{v.id}</Text>
+        </View>
+
+        <View style={{flex:2}}>
+          <Text>{v.title}</Text>
+        </View>
+        <View style={{flex:2}}>
+          <Text>{v.body}</Text>
+        </View>
+        <View style={{flex:2}}>
+          <Text>Ref</Text>
+        </View>
+        <View style={{flex:2}}>
+          <Text>Party</Text>
+        </View >
+        <View style={{flex:2}}>
+          <Text>Debit</Text>
+        </View>
+        <View style={{flex:2}}>
+          <Text>Credit</Text>
+        </View>
+      </View>)
+      })}
+
+      
+     
       <View
         style={{
           flexDirection: 'row',

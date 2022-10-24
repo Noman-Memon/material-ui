@@ -17,18 +17,18 @@ const columns = [
     },
   },
 ]
-const DataTable = () => {
-  const [tableData, setTableData] = useState([])
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((data) => data.json())
-      .then((data) => setTableData(data))
-  }, [])
+const DataTable = (props) => {
+  // const [tableData, setTableData] = useState([])
+  // useEffect(() => {
+  //   fetch('https://jsonplaceholder.typicode.com/posts')
+  //     .then((data) => data.json())
+  //     .then((data) => setTableData(data))
+  // }, [])
   return (
     <>
       <div className="container" style={{ height: 700, width: '100%' }}>
         <DataGrid
-          rows={tableData}
+          rows={props.tableData}
           columns={columns}
           pageSize={10}
           checkboxSelection
