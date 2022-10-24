@@ -168,7 +168,7 @@ import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer'
 //   },
 // })
 // Create Document Component
-const MyDocument = () => (
+const MyDocument = (props) => (
   <Document>
     <Page size="A4" style={{ padding: '20px' }}>
       <View
@@ -382,6 +382,20 @@ const MyDocument = () => (
           <Text>Audit By</Text>
         </View>
       </View>
+      {/* <View
+        style={{
+          flexDirection: 'row',
+          fontSize: 12,
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginTop: 50,
+        }}
+      >
+        <Text style={{ borderTop: '1px solid black' }}>this is muammil</Text>
+        <Text style={{ borderTop: '1px solid  black' }}>this is muammil</Text>
+        <Text style={{ borderTop: '1px solid gray' }}>this is muammil</Text>
+        <Text style={{ borderTop: '1px solid gray' }}>this is muammil</Text>
+      </View> */}
     </Page>
   </Document>
 )

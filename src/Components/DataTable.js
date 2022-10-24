@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { DataGrid } from '@mui/x-data-grid'
 import { PDFViewer } from '@react-pdf/renderer'
-import { MyDocument } from './Pdf'
+import MyDocument from './Pdf'
 import { Button } from '@mui/material'
 
 const columns = [
@@ -25,17 +25,19 @@ const DataTable = () => {
       .then((data) => setTableData(data))
   }, [])
   return (
-    <div className="container" style={{ height: 700, width: '100%' }}>
-      <DataGrid
-        rows={tableData}
-        columns={columns}
-        pageSize={10}
-        checkboxSelection
-      ></DataGrid>
+    <>
+      <div className="container" style={{ height: 700, width: '100%' }}>
+        <DataGrid
+          rows={tableData}
+          columns={columns}
+          pageSize={10}
+          checkboxSelection
+        ></DataGrid>
+      </div>
       {/* <PDFViewer width="100%" height="1000px">
-        <MyDocument />
+        <MyDocument nomankadata={tableData} />
       </PDFViewer> */}
-    </div>
+    </>
   )
 }
 export default DataTable
