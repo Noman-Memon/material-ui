@@ -12,12 +12,13 @@ const columns = [
     field: 'action',
     headerName: 'Action',
     renderCell: (params) => {
-      // console.log(params)
+      console.log(params)
       return <Button onClick={() => console.log(params.row)}>Test</Button>
     },
   },
 ]
 const DataTable = (props) => {
+  console.log(props)
   // const [tableData, setTableData] = useState([])
   // useEffect(() => {
   //   fetch('https://jsonplaceholder.typicode.com/posts')
