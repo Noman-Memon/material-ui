@@ -267,6 +267,7 @@ const MyDocument = (props) => (
           border: '1px solid black',
         }}
       ></View>
+      {/* start header */}
       <View
         style={{
           flexDirection: 'row',
@@ -300,6 +301,7 @@ const MyDocument = (props) => (
           <Text>Credit</Text>
         </View>
       </View>
+      {/* end header */}
       <View
         style={{
           border: '1px solid black',

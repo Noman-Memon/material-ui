@@ -12,7 +12,7 @@ const columns = [
     field: 'action',
     headerName: 'Action',
     renderCell: (params) => {
-      // console.log(params)
+      console.log(params)
       return <Button onClick={() => console.log(params.row)}>Test</Button>
     },
   },
