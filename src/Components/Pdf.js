@@ -340,20 +340,6 @@ const MyDocument = (props) => (
       </View>)
       })}
 
-      
-     
-      <View
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          fontSize: '10',
-          paddingBottom: '5',
-          paddingTop: '200',
-          display: 'flex',
-        }}
-      >
-        fsdfsdffg
-      </View>
       <View
         style={{
           border: '1px solid black',
